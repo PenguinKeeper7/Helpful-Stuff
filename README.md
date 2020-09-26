@@ -8,3 +8,6 @@
 
 **Programming Language Comparison (WIP):**
 [Here](https://docs.google.com/spreadsheets/d/1TXDCkC6WNlcAWelNuZL0V8O-JRNEhRy5TGOTMi7dxJo/edit?usp=sharing)
+
+**Learn To Crack Hashes Guide:**
+[Here](https://learntocrackhashes.000webhostapp.com/)
