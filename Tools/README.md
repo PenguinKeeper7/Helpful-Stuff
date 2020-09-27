@@ -17,4 +17,4 @@ mask.hcmask - The file with all of the masks in
 
 true - Print the keyspace along with the mask (Optional)
 
-> limitedMasks.hcmask - Pipe output to a file (Optional)
+\> limitedMasks.hcmask - Pipe output to a file (Optional)
