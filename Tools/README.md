@@ -3,7 +3,7 @@
 **Keyspace Limiter:**
 This tool is for limiting the maximum keyspace of masks in a .hcmask file, or can be used to identify the keyspace is for sorting by efficiency, instead of just by how many cracks a mask gets.
 
-#Usage
+# Usage
 ```
 python keyspaceLimiter.py mask.hcmask 10000 [true]
 ```
