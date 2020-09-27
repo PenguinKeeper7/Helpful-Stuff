@@ -9,7 +9,7 @@ This tool is for limiting the maximum keyspace of masks in a .hcmask file, or ca
 
 ### Usage
 ```
-python keyspaceLimiter.py mask.hcmask 10000 [true] [> limitedMasks.hcmask]
+python keyspaceLimiter.py mask.hcmask 10000 true > limitedMasks.hcmask
 ```
 ```mask.hcmask``` - The file with all of the masks in
 
