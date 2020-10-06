@@ -9,5 +9,8 @@
 **Programming Language Comparison (WIP):**
 [Here](https://docs.google.com/spreadsheets/d/1TXDCkC6WNlcAWelNuZL0V8O-JRNEhRy5TGOTMi7dxJo/edit?usp=sharing)
 
+**Hashes.org Hash Type Frequency**
+[Here](https://docs.google.com/spreadsheets/d/1Yy_y3wChpOy2mXO2BB2NHoigr9ULD3RXMmHiQ2BiOkE/edit?usp=sharing)
+
 **Learn To Crack Hashes Guide:**
 [Here](https://learntocrackhashes.000webhostapp.com/)
