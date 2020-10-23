@@ -8,10 +8,11 @@ passlib backend: argon2_cffi (Performance may tank significantly with argon2pure
 
 Measured with:  
 ```python
-outfile = open("out.txt", "w")
 
 from passlib.hash import argon2
 from datetime import datetime
+
+outfile = open("out.txt", "w")
 
 for x in range(1,20001):
     start = datetime.now()
