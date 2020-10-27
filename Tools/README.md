@@ -29,7 +29,7 @@ This tool's main goal is to avoid the hastle of having separators within the sal
 
 ### Usage
 ```
-python vBulletinParse.py hashes.txt parsed.txt [separator]
+python vBulletinParse.py hashes.txt parsed.txt separator
 ```
 ```hashes.txt``` - The file with the raw `hash:salt:plains` in.
 
