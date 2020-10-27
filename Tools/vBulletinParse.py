@@ -2,13 +2,18 @@ import sys
 
 args = sys.argv
 
-infile = open(args[1], "r")
+try:
+    infile = open(args[1], "r")
+except:
+    print("Hashes file not found...")
+    sys.exit()
+
 outfile = open(args[2], "w")
 
 try:
     separator = args[3]
 except:
-    separator = "SEP"
+    separator = "SEPARATOR"
 
 for x in infile:
     x = x.replace(":", separator, 1)
