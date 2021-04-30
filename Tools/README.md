@@ -36,3 +36,18 @@ python vBulletinParse.py hashes.txt parsed.txt separator
 ```parsed.txt``` - The file to write the newly parsed hashSEPARATORsaltSEPARATORplains to.
 
 ```separator``` - Define the separator, with the default being "SEPARATOR". (Optional)
+
+## hexSalt:
+
+This tool's main goal is to avoid the hastle of having separators within the salt of hashes by hexxing the salt, so that software can handle it easier, such as with "--hex-salt" in Hashcat.
+
+### Requirements
+[Python](https://www.python.org/downloads/), tested working with 3.7.7, although all Python3 versions should theoretically work.
+
+### Usage
+```
+python3 hexSalt.py hashes.txt outfile.txt
+```
+```hashes.txt``` - The file with the raw `hash:salt`s in.
+
+```outfile.txt``` - The file to write the newly parsed hash:`hex(salt)`s to.
