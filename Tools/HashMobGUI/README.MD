@@ -4,7 +4,7 @@
 A simple GUI tool that takes an input hashlist, sends requests to the hashmob.net API, then outputs any found hashes along with their associated plains, with each found deducting a credit from the account linked.
 
 ## Searching Limits
-Using credits: 5s timeout per 1,000 hashes
+Using credits: 5s timeout per 1,000 hashes<br>
 Free: 11 minute timeout per 1,000 hashes
 
 ## API-Keys
