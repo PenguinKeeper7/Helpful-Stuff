@@ -25,29 +25,35 @@ except:
 
 for mask in maskFile:
     #Reset variables
-    originalMask = mask
     keyspace = 1
     
-    mask = mask.replace("?", "")
+    for i in range(len(mask)):
+        character = mask[i]
 
-    #Change each charset to it's keyspace counterpart
-    for x in mask:
-        x = x.replace("l", "26")
-        x = x.replace("u", "26")
-        x = x.replace("d", "10")
-        x = x.replace("h", "16")
-        x = x.replace("H", "16")
-        x = x.replace("s", "33")
-        x = x.replace("a", "95")
-        x = x.replace("b", "256")
-        if(x.isnumeric()):
-            keyspace = keyspace * int(x)
+        if (mask[max(i - 1, 0)] != "?"):
+            continue
+        elif (character == "l"):
+            keyspace *= 26
+        elif (character == "u"):
+            keyspace *= 26
+        elif (character == "d"):
+            keyspace *= 10
+        elif (character == "h"):
+            keyspace *= 16
+        elif (character == "H"):
+            keyspace *= 16
+        elif (character == "s"):
+            keyspace *= 33
+        elif (character == "a"):
+            keyspace *= 95
+        elif (character == "b"):
+            keyspace *= 256
 
     #If the mask doesn't exceed the max keyspace
     if(keyspace <= keyspaceMax):
         if(printKeyspace):
-            print(originalMask.rstrip() + ":" + str(keyspace))
+            print(mask.rstrip() + ":" + str(keyspace))
         else:
-            print(originalMask.rstrip())
+            print(mask.rstrip())
 
 maskFile.close()
