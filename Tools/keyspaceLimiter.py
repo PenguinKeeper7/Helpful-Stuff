@@ -1,5 +1,8 @@
 import codecs, sys
 
+# Current max of 4 charsets
+# Will need to be changed if the max is increased, such as in:
+# https://github.com/hashcat/hashcat/commit/a0de388bb92cf832ee513a207991379805d9bab6
 customCharsets = [0, 0, 0, 0]
 
 def calculateKeyspace(character):
@@ -48,20 +51,25 @@ def prepareCustomCharsets(mask):
 			if (character != '?'):
 				customCharsets[index] += calculateKeyspace(character)
 		index += 1
+		# Current max of 4 charsets, ignore any others
+		# Will need to be changed if the max is increased, such as in:
+		# https://github.com/hashcat/hashcat/commit/a0de388bb92cf832ee513a207991379805d9bab6
+		if(index == 4):
+			return
 
 args = sys.argv
 
 try:
-	#Attempt to open the file with the first argument
+	# Attempt to open the file with the first argument
 	maskFile = codecs.open(args[1], "r", encoding="utf8", errors="replace")
 
-	#Enforce the keyspace is numeric, then set to second argument
+	# Enforce the keyspace is numeric, then set to second argument
 	keyspaceMax = 0
 	if(args[2].isnumeric()):
 		keyspaceMax = int(args[2])
 	else: a
 	
-	#Check if the keyspace should be printed
+	# Check if the keyspace should be printed
 	printKeyspace = False
 	if(len(args) == 4):
 		if (args[3].lower() == "true"):
